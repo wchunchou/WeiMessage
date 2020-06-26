@@ -1,1 +1,37 @@
-<h1>This is the root routes</h1exit>
+<h2 class="ui center aligned icon header">
+  <i class="circular users icon"></i>
+  Chatroom
+</h2>
+<div class="ui two column centered grid">
+    <div class="twelve wide column">
+        <div class="ui card fluid chatbox">
+            <div class="content">
+                <h4 class="ui sub header">Chat logs</h4>
+                <div class="ui small feed">
+                 <%= render @messages %>
+                
+                
+                </div>
+            </div>
+            <div class="extra content">
+                <div class="ui fluid action input">
+                  <input type="text" placeholder="Say something">
+                  <div class="ui button">Submit</div>
+                </div>
+            </div>
+            </div>
+    </div>
+    <div class="two wide column">
+        <div class="ui secondary vertical menu chatbox">
+            <a class="item">
+                Guest 1
+            </a>
+            <a class="item">
+                Guest 2
+            </a>
+            <a class="item">
+                Guest 3
+            </a>
+        </div>
+    </div>
+</div>
