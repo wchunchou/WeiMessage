@@ -7,19 +7,19 @@
         <div class="ui card fluid chatbox">
             <div class="content">
                 <h4 class="ui sub header">Chat logs</h4>
-                <div class="ui small feed">
+                <div id="chatroom" class="ui small feed">
                  <%= render @messages %>
-                
-                
                 </div>
             </div>
             <div class="extra content">
+                <%= form_for(@message, html:{role:'form'}, url: message_path, remote: true) do |f|%>
                 <div class="ui fluid action input">
-                  <input type="text" placeholder="Say something">
-                  <div class="ui button">Submit</div>
+                  <%= f.text_field :body, placeholder:'Say something'%>
+                  <%= f.button 'Submit', class:'ui button' %>
                 </div>
+                <%end%>
             </div>
-            </div>
+        </div>
     </div>
     <div class="two wide column">
         <div class="ui secondary vertical menu chatbox">
