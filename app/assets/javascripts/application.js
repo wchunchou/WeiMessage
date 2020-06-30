@@ -17,10 +17,29 @@
 //= require semantic-ui
 //= require_tree .
 
+scroll_bottom = function(){
+    if ($('#chatroomContainer').length >0){
+        $('#chatroomContainer').scrollTop($('#chatroomContainer')[0].scrollHeight);
+    }
+}
+
+submit_msg = function(){
+    $('#message_body').on('keydown', function(e){
+        if(e.keyCode == 13){
+            $('button').click();
+            e.target.value=""
+        }
+    })
+}
+
 $(document).on('turbolinks:load', function(){
     $('.message .close').on('click', function() {
         $(this).closest('.message').transition('fade');
     });
+    scroll_bottom()
+    submit_msg()
 });
+
+
 
 

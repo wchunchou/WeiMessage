@@ -3,3 +3,8 @@
 .chatbox{
     height:480px
 }
+
+#chatroomContainer{
+    overflow-y: auto;
+    max-height: 433px;
+}
